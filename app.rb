@@ -51,9 +51,3 @@ post('/lists/:id') do
   @task.save()
   erb(:list)
 end
-
-
-
-# get '/tasks/new' do
-#   "WTF"
-# end

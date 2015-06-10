@@ -14,20 +14,20 @@
   <% end %>
 
 <div class="container">
-  <a href="/">Home</a>
-  <br>
   <a href="/lists">View All Lists</a>
   <br>
   <a href="/lists/new">Add New List</a>
-  <!-- <br>
-  <a href="/tasks/new">Add New Task</a> -->
 </div>
+
+
 
 
   <form action="/lists/<%= @list.id()%>" method="post">
     <div class="form-group">
       <label class="form-label" for="task_name">Name of Task:</label>
       <input class="form-control" id="task_name" name="task_name" type="text" placeholder="List Task" autofocus>
-      <button type="submit" class="button btn">Name of Task</button>
+      <button type="submit" class="button btn">Save</button>
     </div>
   </form>
+
+  <a href="/">Home</a>
