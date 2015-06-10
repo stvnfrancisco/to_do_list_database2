@@ -1,0 +1,17 @@
+<h1>Current Lists</h1>
+
+<% if @lists.any?() %>
+  <h3>Lists:</h3>
+
+  <ul>
+    <% @lists.each() do |list| %>
+      <li><a href="/lists/<%= list.id()%>"><%= list.name() %></a> </li>
+    <% end %>
+  </ul>
+
+<% else %>
+
+    <p>No Lists</p>
+
+<% end %>
+  

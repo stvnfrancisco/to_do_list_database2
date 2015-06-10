@@ -1,0 +1,48 @@
+<h1><%= @list.name() %></h1>
+
+<% if @list.tasks().any?() %>
+  <h3>Here are all the tasks in this list:</h3>
+
+  <ul>
+    <% @list.tasks().each() do |task| %>
+      <li><%= task.description() %></li>
+    <% end %>
+  </ul>
+
+  <% else %>
+    <p>There are no tasks on this list!</p>
+  <% end %>
+
+<div class="container">
+  <a href="/">Home</a>
+  <br>
+  <a href="/lists">View All Lists</a>
+  <br>
+  <a href="/lists/new">Add New List</a>
+  <br>
+  <a href="/tasks/new">Add New Task</a>
+</div>
+
+<h1><%= @list.name() %></h1>
+
+<% if @list.tasks().any?() %>
+<h3>Here are all the tasks in this list:
+
+  <ul>
+    <% @list.tasks().each() do |task| %>
+      <li><%= task.description() %></li>
+
+      <% end %>
+  </ul>
+
+  <% else %>
+    <p>No Tasks</p>
+  <% end %>
+
+  <form action="/lists/:id" method="post">
+    <div class="form-group">
+      <label class="form-label" for="task_name">Name of Task:</label>
+      <input class="form-control" id="task_name" name="task_name" type="text" placeholder="List Task" autofocus>
+      <button type="submit" class="button btn">Name of Task</button>
+    </div>
+  </form>

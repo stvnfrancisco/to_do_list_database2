@@ -1,7 +1,11 @@
+ENV['RACK_ENV'] = 'test'
+
 require('rspec')
 require('pg')
 require('list')
 require('task')
+require('pry')
+require('launchy')
 
 DB = PG.connect({:dbname => 'to_do_test'})
 
